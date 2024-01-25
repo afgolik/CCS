@@ -5,9 +5,10 @@ window.onload = function() {
     body.classList.remove('load');
     preloader.style.display = 'none';
 
-    const mySlider = document.getElementById('my-slider');
-    const sliderValue = document.getElementById('slider-value');
+    const mySlider = document.querySelector('#my-slider');
+    const sliderValue = document.querySelector('#slider-value');
 
+    mySlider.addEventListener('input', slider);
     function slider() {
         sliderValue.textContent = mySlider.value;
     }
