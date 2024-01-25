@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function () {
     const body = document.querySelector('body');
     const preloader = document.querySelector('#preloader');
 
@@ -9,6 +9,7 @@ window.onload = function() {
     const sliderValue = document.querySelector('#slider-value');
 
     mySlider.addEventListener('input', slider);
+
     function slider() {
         sliderValue.textContent = mySlider.value;
     }
@@ -35,4 +36,20 @@ window.onload = function() {
     body.addEventListener('click', () => {
         select.classList.remove('select-active');
     });
+
+    const burgerBtn = document.querySelector('#open-menu');
+    const menu = document.querySelector('.navigate');
+    const menuItems = document.querySelectorAll('.navigate__item');
+
+    burgerBtn.addEventListener('click', () => {
+        burgerBtn.classList.toggle('burger-active');
+        menu.classList.toggle('navigate-active');
+    })
+
+    menuItems.forEach(menuItem => {
+        menuItem.addEventListener('click', () => {
+            burgerBtn.classList.remove('burger-active');
+            menu.classList.remove('navigate-active');
+        })
+    })
 }
