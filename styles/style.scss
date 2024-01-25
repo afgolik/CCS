@@ -222,6 +222,12 @@ $black-light: #2a2b30;
     }
   }
 
+  &__form {
+    margin-top: 87px;
+  }
+}
+
+.info {
   &__image {
     margin: 0 auto;
     width: 100px;
@@ -234,15 +240,11 @@ $black-light: #2a2b30;
     justify-content: center;
   }
 
-  &__info {
+  &__text {
     color: $white;
     font-size: 16px;
     margin-top: 21px;
     margin-left: 14px;
-  }
-
-  &__form {
-    margin-top: 87px;
   }
 }
 
@@ -261,6 +263,10 @@ $black-light: #2a2b30;
     display: block;
     position: relative;
     cursor: pointer;
+    
+    input {
+      display: none;
+    }
 
     svg {
       position: absolute;
@@ -338,7 +344,6 @@ $black-light: #2a2b30;
     border: 1px solid #fff;
     background: rgba(255, 255, 255, 0.85);
     width: 370px;
-    display: block;
 
     &::placeholder {
       color: #272733;
@@ -616,6 +621,7 @@ $black-light: #2a2b30;
     max-width: 300px;
   }
   .main {
+    background-image: url("../images/main-back-mobile.png");
     &__title {
       font-size: 27px;
     }

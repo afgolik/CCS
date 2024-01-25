@@ -9,6 +9,7 @@ slider();
 
 const select = document.querySelector('.select');
 const selectView = document.querySelector('.select__view span');
+const selectInput = document.querySelector('.select__view input');
 const options = document.querySelectorAll('.select__option');
 const body = document.querySelector('body');
 
@@ -20,6 +21,7 @@ select.addEventListener('click', (e) => {
 options.forEach(option => {
     option.addEventListener('click', () => {
         selectView.innerText = option.innerText;
+        selectInput.value = option.innerText;
     });
 });
 
