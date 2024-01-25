@@ -1,3 +1,9 @@
+const body = document.querySelector('body');
+const preloader = document.querySelector('#preloader');
+
+body.classList.remove('load');
+preloader.style.display = 'none';
+
 const mySlider = document.getElementById('my-slider');
 const sliderValue = document.getElementById('slider-value');
 
@@ -11,7 +17,6 @@ const select = document.querySelector('.select');
 const selectView = document.querySelector('.select__view span');
 const selectInput = document.querySelector('.select__view input');
 const options = document.querySelectorAll('.select__option');
-const body = document.querySelector('body');
 
 select.addEventListener('click', (e) => {
     e.stopPropagation();

@@ -36,6 +36,21 @@ $black-light: #2a2b30;
   box-sizing: border-box;
 }
 
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 100000;
+}
+
+.load {
+  height: 100vh;
+  overflow: hidden;
+}
+
 .container {
   width: 1170px;
   margin: 0 auto;
